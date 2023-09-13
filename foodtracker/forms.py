@@ -11,6 +11,16 @@ class FoodForm(forms.ModelForm):
         model = Food
         fields = ['food_name', 'quantity', 'calories', 'fat', 'carbohydrates', 'protein', 'category']
 
+        labels = {
+            'food_name' : 'Étel neve',
+            'quantity' : 'Mennyiség', 
+            'calories' : 'Kalória' , 
+            'fat' : 'Zsír', 
+            'carbohydrates' : 'Szénhidrát',
+            'protein' : 'Fehérje',
+            'category' : 'Kategória',
+        }
+
     def __init__(self, *args, **kwargs):
         super(FoodForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
