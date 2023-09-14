@@ -1,5 +1,6 @@
 var table  = document.getElementById('foodtable');
-var calories = 0, fat = 0, carbohydrates = 0, protein = 0;
+var calories = 0, fat = 0, carbohydrates = 0, protein = 0, quantity = 100;
+var sumCalories  = calories * quantity;
 
 for(var i = 1; i <table.rows.length - 1; i++) {
     calories += parseFloat(table.rows[i].cells[1].innerHTML);
@@ -12,12 +13,15 @@ for(var i = 1; i <table.rows.length - 1; i++) {
 
     protein += parseFloat(table.rows[i].cells[4].innerHTML);
     protein = Math.round(protein);    
+
+/*     quantity += parseFloat(table.rows[i].cells[5].innerHTML);
+    quantity = Math.round(quantity); */
 }
 
 document.getElementById('totalCalories').innerHTML = '<b>' + calories + '</b>';
 document.getElementById('totalFat').innerHTML = '<b>' + fat + '</b>';
 document.getElementById('totalCarbohydrates').innerHTML = '<b>' + carbohydrates + '</b>';
-document.getElementById('totalProtein').innerHTML = '<b>' + protein + '</b>';
+document.getElementById('totalProtein').innerHTML = '<b>' + protein + '</b>'; 
 
 var total = fat + carbohydrates + protein;
 

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from datetime import date
 
 
 class User(AbstractUser):
@@ -46,6 +47,11 @@ class Image(models.Model):
 class FoodLog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     food_consumed = models.ForeignKey(Food, on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=100)
+    consumed_date = models.DateField(default=date.today)
+
+    def calories_sum(self):
+        return self.quantity * self.food_consumed.calories / 100
 
     class Meta:
         verbose_name = 'Food Log'

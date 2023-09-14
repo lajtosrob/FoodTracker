@@ -35,6 +35,10 @@ class ImageForm(forms.ModelForm):
         model = Image
         fields = ['image']
 
+        labels = {
+            'image' : 'Kép',
+        }
+
     def __init__(self, *args, **kwargs):
         super(ImageForm, self).__init__(*args, **kwargs)
         self.visible_fields()[0].field.widget.attrs['class'] = 'form-control'

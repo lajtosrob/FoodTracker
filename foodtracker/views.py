@@ -10,6 +10,7 @@ from django.urls import reverse
 from .models import User, Food, FoodCategory, FoodLog, Image, Weight
 from .forms import FoodForm, ImageForm
 
+from datetime import date
 
 def index(request):
     '''
@@ -177,12 +178,14 @@ def food_log_view(request):
         # get the food item selected by the user
         food = request.POST['food_consumed']
         food_consumed = Food.objects.get(food_name=food)
+        quantity = request.POST['quantity']
+        consumed_date = date.today()
 
         # get the currently logged in user
         user = request.user
 
         # add selected food to the food log
-        food_log = FoodLog(user=user, food_consumed=food_consumed)
+        food_log = FoodLog(user=user, food_consumed=food_consumed, quantity = quantity, consumed_date = consumed_date)
         food_log.save()
 
     else:  # GET method
