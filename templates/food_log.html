@@ -27,7 +27,9 @@
                                                 <div class='row'>
                                                     <h6>Étel</h6>   
                                                     <div class='col-8' >
-                                                        <select class='form-select' name='food_consumed' id='food_consumed'>
+                                                        <select class='form-select' name='food_consumed' id='food_consumed' required>
+                                                            <option value=''>-- válasszon --</option>
+
                                                             {% for food in foods %}
                                                                 <option value='{{food.food_name}}'>
                                                                     {{ food.food_name }}
@@ -65,11 +67,11 @@
                                 </div>
                                 <div class='card-body'>
 
-                                    <table id='foodtable' class='table table-hover'>
+                                    <table id='foodtable' class='table table-striped table-hover'>
                                         <thead>
                                             <tr>
                                                 <th scope='col' class='col-md-2'>Étel</th>
-                                                <th scope='col' class='col-md-2'>Kalória</th>
+                                                <th scope='col' class='col-md-2'>Kalória kCal</th>
                                                 <th scope='col' class='col-md-2'>Zsír 100g-ban</th>
                                                 <th scope='col' class='col-md-2'>Szénhidrát 100g-ban</th>
                                                 <th scope='col' class='col-md-2'>Fehérje 100g-ban</th>
@@ -101,7 +103,7 @@
 
                                         {% endfor %}
                                             <tr>
-                                                <td id='foodName' class='col-md-2'><b>Total</b></td>
+                                                <td id='foodName' class='col-md-2'><b>Összesen</b></td>
                                                 <td id='totalCalories' class='col-md-2'><b></b></td>
                                                 <td id='totalFat' class='col-md-2'><b></b></td>
                                                 <td id='totalCarbohydrates' class='col-md-2'><b></b></td>
