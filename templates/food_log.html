@@ -28,7 +28,7 @@
                                                     <h6>Étel</h6>   
                                                     <div class='col-8' >
                                                         <select class='form-select' name='food_consumed' id='food_consumed' required>
-                                                            <option value=''>-- válasszon --</option>
+                                                            <option value=''>----------</option>
 
                                                             {% for food in foods %}
                                                                 <option value='{{food.food_name}}'>
@@ -63,7 +63,7 @@
 
                                 <div class='card-header'>
                                     <h5>Ma elfogyasztott ételek</h5>
-                                    <h5><strong class='text-primary'>{% now 'Y F j, D' %}</strong></h5>
+                                    <h5><strong class='text-primary'>{% now 'Y F j, l' %}</strong></h5>
                                 </div>
                                 <div class='card-body'>
 
@@ -81,7 +81,10 @@
                                         <tbody>
                                         {% for food_item in user_food_log %}
 
-                                            {% if food_item.food_consumed.consumed_date == now %}
+                                            {% comment %} {% if food_item.food_consumed.consumed_date == now %} {% endcomment %}
+                                            {% now "Y-m-d" as current_date %}
+                                            {% with food_item.consumed_date|date:"Y-m-d" as formatted_consumed_date %}
+                                            {% if formatted_consumed_date == current_date %}
                                             
                                                 <tr>
                                                     <td class='col-md-2'>{{ food_item.food_consumed.food_name }}</td>
@@ -100,6 +103,8 @@
                                                 </tr>                                            
                                             
                                             {% endif %}
+
+                                            {% endwith %}
 
                                         {% endfor %}
                                             <tr>

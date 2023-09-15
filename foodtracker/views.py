@@ -238,6 +238,7 @@ def weight_log_view(request):
 
     # get the weight log of the logged in user
     user_weight_log = Weight.objects.filter(user=request.user)
+    user_weight_log = Weight.objects.all().order_by('entry_date').values()
 
     return render(request, 'user_profile.html', {
         'categories': FoodCategory.objects.all(),

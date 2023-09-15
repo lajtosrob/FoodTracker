@@ -58,7 +58,7 @@ class FoodLog(models.Model):
         verbose_name_plural = 'Food Log'
 
     def __str__(self):
-        return f'{self.user.username} - {self.food_consumed.food_name}'
+        return f'{self.user.username} - {self.food_consumed.food_name} - {self.consumed_date}'
 
 
 class Weight(models.Model):
