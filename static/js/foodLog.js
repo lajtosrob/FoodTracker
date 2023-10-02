@@ -55,7 +55,7 @@ var myPieChart = new Chart(ctx, {
         [
             {
                 data: [fatPercentage, carbohydratesPercentage, proteinPercentage],
-                backgroundColor: ['#e5a641', '#55b560', '#419ad6'],
+                backgroundColor: ['#03FCF0', '#d34588', '#17a2b8'],
             }
         ],
     },

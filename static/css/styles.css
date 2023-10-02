@@ -33,3 +33,21 @@ footer {
     background-size: cover;
 }
 
+.light-green {
+    background-color: rgb(3, 252, 240);
+}
+
+.light-blue {
+    background-color: rgb(116, 145, 227);
+    color: rgb(225, 229, 240);
+}
+
+.light-red {
+    background-color: rgb(227, 64, 64);
+    color:white;
+}
+
+.green {
+    background-color: #28a745;
+    color: aliceblue;
+}
