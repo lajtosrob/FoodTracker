@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}KalóriaBoom | Étkezési napló{% endblock %}
+{% block title %}Kalória-Boom | Étkezési napló{% endblock %}
 
 {% block body %}
 <div class='py-4 mt-auto'>
@@ -81,7 +81,8 @@
                                                             type='number' 
                                                             name='weight'
                                                             id='weight'
-                                                            placeholder='0.00' required name='weight' 
+                                                            placeholder='0.00' 
+                                                            required
                                                             min='0' 
                                                             value='' 
                                                             step='1' 
@@ -109,7 +110,7 @@
                                 </div>
                                 <div class='card-body'>
 
-                                    <table id='weightable' class='table'>
+                                    <table id='weightable' class='table table-striped table-hover'>
                                         <thead>
                                             <tr>
                                                 <th scope='col' class='col-md-4'>Testsúly kg-ban</th>

@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}KalóriaBoom | Étkezési napló{% endblock %}
+{% block title %}Kalória-Boom | Étkezési napló{% endblock %}
 
 {% block body %}
 <div class='py-4 mt-auto'>
@@ -40,7 +40,7 @@
 
                                                     <div class='col-4'>
                                                         <button type='submit' class='btn btn-primary'>
-                                                            Étel hozzáadása
+                                                            <i class="fas fa-light fa-plus fa-beat ml-3"></i>
                                                         </button>
                                                     </div>
 
@@ -71,30 +71,28 @@
                                         <thead>
                                             <tr>
                                                 <th scope='col' class='col-md-2'>Étel</th>
-                                                <th scope='col' class='col-md-2'>Kalória kCal</th>
-                                                <th scope='col' class='col-md-2'>Zsír 100g-ban</th>
-                                                <th scope='col' class='col-md-2'>Szénhidrát 100g-ban</th>
-                                                <th scope='col' class='col-md-2'>Fehérje 100g-ban</th>
+                                                <th scope='col' class='col-md-2'>Kaló-ria</th>
+                                                <th scope='col' class='col-md-2'>Zsír</th>
+                                                <th scope='col' class='col-md-2'>Szén-hidrát</th>
+                                                <th scope='col' class='col-md-2'>Fehér-je</th>
                                                 <th scope='col' class='col-md-2'></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         {% for food_item in user_food_log %}
 
-                                            {% comment %} {% if food_item.food_consumed.consumed_date == now %} {% endcomment %}
                                             {% now "Y-m-d" as current_date %}
                                             {% with food_item.consumed_date|date:"Y-m-d" as formatted_consumed_date %}
                                             {% if formatted_consumed_date == current_date %}
                                             
                                                 <tr>
                                                     <td class='col-md-2'>{{ food_item.food_consumed.food_name }}</td>
-                                                    {% comment %} <td class='col-md-2'> {% with sumcalories=food_item.food_consumed.calories|mul:food_item.quantity %} {{  sumcalories }} {% endwith %}</td> {% endcomment %}
-                                                    {% comment %} <td class='col-md-2'> {{  food_item.food_consumed.calories|mul:food_item.quantity }}</td> {% endcomment %}
-                                                    {% comment %} <td class='col-md-2'> {% widthratio  food_item.food_consumed.calories 1 food_item.quantity %}</td> {% endcomment %}
+                                                   
                                                     <td class='col-md-2'> {{ food_item.calories_sum }}</td>
-                                                    <td class='col-md-2'>{{ food_item.food_consumed.fat }}</td>
-                                                    <td class='col-md-2'>{{ food_item.food_consumed.carbohydrates }}</td>
-                                                    <td class='col-md-2'>{{ food_item.food_consumed.protein }}</td>   
+                                                    <td class='col-md-2'> {{ food_item.fat_sum }}</td>
+                                                    <td class='col-md-2'> {{ food_item.carbohydrates_sum }}</td>
+                                                    <td class='col-md-2'> {{ food_item.protein_sum }}</td>
+
                                                     <td>
                                                         <a class='btn btn-danger' href="{% url 'food_log_delete' food_item.id %}">
                                                             <i class='fas fa-trash-alt'></i>
@@ -163,7 +161,7 @@
         </div>
 
     </div>
-</div>    
+</div>   
 {% endblock %}
 
 {% block script %}

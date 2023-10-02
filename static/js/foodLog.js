@@ -1,6 +1,9 @@
 var table  = document.getElementById('foodtable');
 var calories = 0, fat = 0, carbohydrates = 0, protein = 0, quantity = 100;
 var sumCalories  = calories * quantity;
+var sumFat = fat * quantity;
+var sumCarbohydrates = carbohydrates * quantity;
+var sumProtein = protein * quantity;
 
 for(var i = 1; i <table.rows.length - 1; i++) {
     calories += parseFloat(table.rows[i].cells[1].innerHTML);
@@ -44,9 +47,9 @@ var myPieChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
         labels: [
-            'Fat ' + fatPercentage + '%', 
-            'Carbs ' +  carbohydratesPercentage + '%', 
-            'Protein ' + proteinPercentage + '%'
+            'Zsír ' + fatPercentage + '%', 
+            'Szénhidrát ' +  carbohydratesPercentage + '%', 
+            'Fehérje ' + proteinPercentage + '%'
         ],
         datasets: 
         [
@@ -92,6 +95,7 @@ var myPieChart = new Chart(ctx, {
 // Calorie Goal Progress Bar
 
 var caloriePercentage = (calories / 2000) *  100;
+caloriePercentage = caloriePercentage.toFixed(2);
 //document.getElementById('progressBar').setAttribute('style', 'width:' + caloriePercentage + '%');
 
 $('.progress-bar').animate({
@@ -101,4 +105,4 @@ $('.progress-bar').animate({
 var interval = setInterval(function () {
 $('.progress-bar').html(caloriePercentage + '%');
 
-}, 500);
+}, 200);

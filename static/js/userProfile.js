@@ -58,13 +58,13 @@ var myChart = new Chart(ctx, {
                     fontColor: '#555759',
                     fontSize: 16,
                     fontStyle: 700,
-                    labelString: 'Date'
+                    labelString: 'Dátum'
                 },
             }],
             yAxes: [{
                 ticks: {
                     min: 0,
-                    max: 120,
+                    max: 160,
                     maxTicksLimit: 12,
                     padding: 10,
                     // Include a 'kg' in the ticks
@@ -81,7 +81,7 @@ var myChart = new Chart(ctx, {
                     fontColor: '#555759',
                     fontSize: 16,
                     fontStyle: 700,
-                    labelString: 'Weight in kg'
+                    labelString: 'Testsúly kg-ban'
                 },
             }],
         },

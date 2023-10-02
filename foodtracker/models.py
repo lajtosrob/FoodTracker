@@ -51,7 +51,16 @@ class FoodLog(models.Model):
     consumed_date = models.DateField(default=date.today)
 
     def calories_sum(self):
-        return self.quantity * self.food_consumed.calories / 100
+        return round((self.quantity * self.food_consumed.calories / 100), 1)
+
+    def fat_sum(self):
+        return round((self.quantity * self.food_consumed.fat / 100), 1)
+    
+    def carbohydrates_sum(self):
+        return round((self.quantity * self.food_consumed.carbohydrates / 100), 1)
+    
+    def protein_sum(self):
+        return round((self.quantity * self.food_consumed.protein / 100), 1)
 
     class Meta:
         verbose_name = 'Food Log'
