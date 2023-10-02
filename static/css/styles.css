@@ -9,9 +9,11 @@ body {
     margin: 0 0 90px; /* bottom = footer height */
     font-family: 'Montserrat', sans-serif !important;
 
-    background-image: url("../images/background.png");
+    /* background-image: url("../images/background.png"); */
     background-size: cover;
-    background-color: #cccccc;
+    background-color: rgb(166, 196, 166);
+    color:  rgb(42, 56, 42);
+;
 }
 
 footer {
@@ -21,3 +23,13 @@ footer {
     height: 90px;
     width: 100%;
 }
+
+.dark-green {
+    background-color:  rgb(42, 56, 42);
+}
+
+.nav-bg-picture {
+    background-image: url("../images/background.png");
+    background-size: cover;
+}
+
