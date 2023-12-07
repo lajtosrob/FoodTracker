@@ -12,9 +12,18 @@ from .forms import FoodForm, ImageForm
 
 from rest_framework import generics
 
-from .serializers import FoodSerializer, ImageSerializer
+from .serializers import FoodSerializer, ImageSerializer, UserSerializer
 
 from datetime import date
+
+class UserList(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 class FoodList(generics.ListCreateAPIView):
     queryset = Food.objects.all()
