@@ -3,6 +3,9 @@
 --Django==3.2.12
 --flake8==6.0.0
 --mccabe==0.7.0
+mysqlclient==2.1.1
+psycopg2-binary
+
 --Pillow==9.0.1
 --psycopg2-binary==2.9.3
 --pycodestyle==2.10.0
