@@ -25,7 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Local
-    'foodtracker',
+    'foodtracker.apps.FoodtrackerConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

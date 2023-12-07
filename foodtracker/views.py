@@ -10,7 +10,29 @@ from django.urls import reverse
 from .models import User, Food, FoodCategory, FoodLog, Image, Weight
 from .forms import FoodForm, ImageForm
 
+from rest_framework import generics
+
+from .serializers import FoodSerializer, ImageSerializer
+
 from datetime import date
+
+class FoodList(generics.ListCreateAPIView):
+    queryset = Food.objects.all()
+    serializer_class = FoodSerializer
+
+
+class FoodDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Food.objects.all()
+    serializer_class = FoodSerializer
+
+class ImageList(generics.ListCreateAPIView):
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+
+
+class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
 
 def index(request):
     '''
