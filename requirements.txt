@@ -13,7 +13,6 @@ djangorestframework==3.14.0
 idna==3.4
 packaging==23.1
 Pillow
-pip==23.2.1
 pycodestyle==2.11.0
 pyflakes==3.1.0
 pymemcache==3.5.2
@@ -27,5 +26,3 @@ typing_extensions==4.8.0
 tzdata ==2023.3
 urllib3==1.26.16
 wrapt==1.15.0
-
-
