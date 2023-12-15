@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script defer src="static/kaloriatabla.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="static/kaloriatabla.CSS">
+     <link rel="stylesheet" href="static/kaloriatabla.smiley.css">
+     <title>Ételek táblázat</title>
+</head>
+<body>
+      
+<!--   <div class=" container">
+        <div class="row">
+          <div class="col-sm-2"></div>
+             <div class=body1>
+               <div class="smiley-tarolo1">
+                  <div class="fej1"></div>
+                  <div class="szem1-1"></div>
+                  <div class = "szemgolyo1-1"></div>
+                  <div class="szem1-2"></div>
+                  <div class = "szemgolyo1-2"></div>
+                  <div class="szaj1"></div>
+                  <div class= "gorbeszaj1-1"></div>
+                  <div class= "gorbeszaj1-2"></div>
+                  <div class= "gorbeszaj1-3"></div>
+                  <div class = "kanoc1"></div>
+                  <div class=" kanocto1"></div>
+               </div>        
+            </div>
+      
+        -->
+            <div class = "menuk">
+               <button onmouseenter="mouseEnteredCalculator()" onmouseleave="mouseLeavedCalculator()">Kalóriatáblázat
+               <!-- belépés egérrel a kalóritáblázatot tartlamazó oldalakra -->
+               <div class="content" id="tableContent">
+                   <a href="kaloriatabla.html" target="_blank">Kalóriatáblázat</a>                  
+               </div>
+               </button>  
+
+               <button onmouseenter="mouseEnteredCalculator()" onmouseleave="mouseLeavedCalculator()">Kalkulátor
+               <!-- belépés egérrel a kalkulációt tartlamazó oldalakra -->
+               <div class="content" id="kalkulatorContent">
+                  <a href="BMI.html" target="_blank">BMI számláló</a>     
+                  <a href="BMR.html" target="_blank">BMR számláló</a>
+                  <a href="BMR szuk.html" target="_blank">BMR szükséglet</a>   
+               </div>
+              </button> 
+           </div> 
+    </div>
+</div>
+<hr>
+
+<h1><b><u>Ételek kalóriatáblázata</u></b></h1>
+
+
+<div class=" container">
+  <div class="row">
+    <div class="col-sm-0.5"></div>
+    <div class="col-sm-11">
+        <!-- <button id="loadDataButton">Adatok Betöltése</button> -->
+
+       
+        <br><br>
+        <select  class= "tipuskivalasztogomb" name="valaszt" id="valaszt">          
+            <option value="gabona">Gabona</option>
+            <option value="allati">Állati eredetű</option>
+            <option value="huskeszitm">Húskészítmények</option>
+            <option value="teszta">Tészta</option>
+            <option value="pekaru">Pékáru</option>
+            <option value="zoldseg">Zöldség</option>
+            <option value="gyümölcs">Gyümölcs</option>
+            <option value="tejtermek">Tejtermék</option>
+            <option value="mag">Magvak</option>
+            <option value="zsirolaj">Zsírok-olajok</option>
+            <option value="udito">Üdítő italok</option>
+            <option value="alkoholos">Alkoholos italok</option>
+        </select>
+        <button class="adatkeresogomb" id="searchButton">Adatok Keresése</button>
+        <br><br><br>
+       
+        <table id="adatok-táblázat">
+            <!-- A betöltött adatok jelennek majd meg itt -->
+        </table>
+    <h1>Keresés <span  id="keresettTipus"></span> típusra.</h1>
+        <table  id="keres-tablazat">   
+        </table>
+        <script src="static/etel.js"></script>
+<hr>        
+</div>
+<div class="col-sm-0.5"></div>
+
+    <script  src="static/kaloriatabla_formazas.js"></script>
+        </div>
+      </div>  
+      
+      
+      </body>
+      <body>
+         <p2>Vissza a főoldalra, katt <a href="index.html" target="_blank">[ide]</a></p2>
+      </body>
+     
+      </html>
+      

@@ -31,6 +31,10 @@
 
     <!-- Custom styles -->
     <link href='{% static "css/styles.css" %}' rel="stylesheet" />
+
+    {% block css %}
+    {% endblock  %}
+
   </head>
 
   <body>
@@ -54,7 +58,7 @@
         <div class="collapse navbar-collapse" id="navbarColor">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'index' %}">
+              <a class="nav-link" href="{% url 'food_list' %}">
                 <i class="fas fa-list"></i> Ételek listája
               </a>
             </li>

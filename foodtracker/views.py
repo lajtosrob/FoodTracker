@@ -44,6 +44,9 @@ class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ImageSerializer
 
 def index(request):
+    return render(request, 'index.html')
+
+def food_list_view(request):
     '''
     The default route which lists all food items
     '''

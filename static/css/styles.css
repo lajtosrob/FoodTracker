@@ -16,6 +16,13 @@ body {
 ;
 }
 
+.navbar {
+    position: fixed;
+    top: 10px;
+    width: 99%;
+    
+}
+
 footer {
     position: absolute;
     left: 0;
