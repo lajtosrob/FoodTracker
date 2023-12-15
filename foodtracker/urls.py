@@ -5,6 +5,11 @@ from . import views
 
 urlpatterns = [
     path('index.html', views.index, name='index'),
+    path('SMILE.html', views.SMILE, name='SMILE'),
+    path('BMI.html', views.BMI, name='BMI'),
+    path('BMR.html', views.BMR, name='BMR'),
+    path('BMR szuk.html', views.BMR_szuk, name='BMR_szuk'),
+    path('index.html', views.index, name='index'),
     path('kaloriatabla.html', views.kaloriatabla, name='kaloriatabla'),
     path('', views.food_list, name='food_list'),
     path('login', views.login_view, name='login'),

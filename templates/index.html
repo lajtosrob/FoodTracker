@@ -10,7 +10,7 @@
 
 {% endblock css %}  
 
-{% block title %}Food Tracker | {{ title }}{% endblock %}
+{% block title %}Kalória Boom | {{ title }}{% endblock %}
 
 {% block body %}
 
@@ -96,10 +96,11 @@
         <button onmouseenter="mouseEnteredCalculator2()" onmouseleave="mouseLeavedCalculator2()">Kalkulátor
          <!-- belépés egérrel a kalkulációt tartlamazó oldalakra -->
           <div class="content" id="kalkulatorContent">
-              <a href="BMI.html" target="_blank">BMI számláló</a>     
-              <a href="BMR.html" target="_blank">BMR számláló</a>
-             <a href="BMR szuk.html" target="_blank">BMR szükséglet</a>   
-          </div>
+              <a href="{% url 'BMI' %}" >BMI számláló</a>     
+              <a href="{% url 'BMR' %}" >BMR számláló</a>     
+              <a href="{% url 'BMR_szuk' %}" >BMR szükséglet</a>     
+              
+            </div>
         </button>    
         
                     

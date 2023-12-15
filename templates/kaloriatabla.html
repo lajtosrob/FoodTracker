@@ -12,7 +12,7 @@
 
 {% endblock css %}  
 
-{% block title %}Food Tracker | {{ title }}{% endblock %}
+{% block title %}Kalória Boom | {{ title }}{% endblock %}
 
 {% block body %}
 
@@ -20,16 +20,16 @@
     <button onmouseenter="mouseEnteredCalculator()" onmouseleave="mouseLeavedCalculator()">Kalóriatáblázat
     <!-- belépés egérrel a kalóritáblázatot tartlamazó oldalakra -->
     <div class="content" id="tableContent">
-        <a href="kaloriatabla.html" target="_blank">Kalóriatáblázat</a>                  
+        <a href="kaloriatabla.html">Kalóriatáblázat</a>                  
     </div>
     </button>  
 
     <button onmouseenter="mouseEnteredCalculator()" onmouseleave="mouseLeavedCalculator()">Kalkulátor
     <!-- belépés egérrel a kalkulációt tartlamazó oldalakra -->
     <div class="content" id="kalkulatorContent">
-       <a href="BMI.html" target="_blank">BMI számláló</a>     
-       <a href="BMR.html" target="_blank">BMR számláló</a>
-       <a href="BMR szuk.html" target="_blank">BMR szükséglet</a>   
+       <a href="BMI.html" >BMI számláló</a>     
+       <a href="BMR.html" >BMR számláló</a>
+       <a href="BMR szuk.html" >BMR szükséglet</a>   
     </div>
    </button> 
 </div> 
@@ -71,19 +71,23 @@
 <h1>Keresés <span  id="keresettTipus"></span> típusra.</h1>
 <table  id="keres-tablazat">   
 </table>
-<script src="static/etel.js"></script>
 <hr>        
 </div>
 <div class="col-sm-0.5"></div>
 
-<script  src="static/kaloriatabla_formazas.js"></script>
 </div>
 </div>  
 
+<p>Vissza a főoldalra, katt <a href="{% url 'index' %}" >[ide]</a></p>
+
+{% block footer_scripts %}
+
+<script  src="{% static 'js/kaloriatabla_formazas.js' %}"></script>
+<script  src="{% static 'js/etel.js' %}"></script>
+
+{% endblock footer_scripts %}
 
 </body>
-<body>
-<p2>Vissza a főoldalra, katt <a href="{% static 'index.html' %}" >[ide]</a></p2>
 
 {% endblock %}
 

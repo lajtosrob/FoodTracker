@@ -46,6 +46,19 @@ class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
 def index(request):
     return render(request, 'index.html')
 
+def SMILE(request):
+    return render(request, 'SMILE.html')
+
+def BMI(request):
+    return render(request, 'BMI.html')
+
+def BMR(request):
+    return render(request, 'BMR.html')
+
+def BMR_szuk(request):
+    return render(request, 'BMR.html')
+
+
 def kaloriatabla(request):
     return render(request, 'kaloriatabla.html')
 

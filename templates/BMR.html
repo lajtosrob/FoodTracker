@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <br><br>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
-    <script src = "static/BMR.js"></script> 
-    <script src="static/BMR_legordulomenuk.js"></script>
-    <script src = "static/BMR_idoScript.js"></script> 
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-     <link rel="stylesheet" href="static/BMR.CSS">
-    <title>BMR számláló</title>
-</head>
-<body>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/BMR.css' %}">
+     <script defer src="{% static 'js/BMR.js' %}"></script>
+     <script defer src="{% static 'js/BMR_legordulomenuk.js' %}"></script>
+     <script defer src="{% static 'js/BMR_idoScript.js' %}"></script>
     
+
+{% endblock css %}  
+
+{% block title %}Kalória Boom | {{ title }}{% endblock %}
+
+{% block body %}
 
 <hr>
 
@@ -84,7 +86,7 @@
           <p id = "noBmr"></p>   
           <p id = "ferfiBmr"></p> 
           <p id = "noeredmeny"></p>
-          <p id = ferfieredmeny></p>
+          <p id = "ferfieredmeny"></p>
            <textarea id="eredmenyDoboz" rows="1" cols="35" readonly></textarea>  
            <br> <br> 
 
@@ -103,8 +105,10 @@
   <p>Az elérési dátum: <u><b> <span style="font-size:25px;"  id="datumEredmeny"></b></u></span></p>
 
   <br><hr><br>
-<p>Vissza a főoldalra katt <a href="index.html" target="_blank">[ide]</a></p>
+
+  <p>Vissza a főoldalra, katt <a href="{% url 'index' %}" >[ide]</a></p>
 
 <br>
-</body>
-</html>
+
+
+{% endblock %}
