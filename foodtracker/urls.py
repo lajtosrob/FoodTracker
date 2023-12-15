@@ -1,11 +1,12 @@
 from django.urls import path
-from .views import FoodDetail, FoodList, ImageDetail, ImageList, UserDetail, UserList, index
+from .views import FoodDetail, FoodList, ImageDetail, ImageList, UserDetail, UserList, index, kaloriatabla
 
 from . import views
 
 urlpatterns = [
     path('index.html', views.index, name='index'),
-    path('', views.food_list_view, name='food_list_view'),
+    path('kaloriatabla.html', views.kaloriatabla, name='kaloriatabla'),
+    path('', views.food_list, name='food_list'),
     path('login', views.login_view, name='login'),
     path('logout', views.logout_view, name='logout'),
     path('register', views.register, name='register'),

@@ -46,7 +46,10 @@ class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
 def index(request):
     return render(request, 'index.html')
 
-def food_list_view(request):
+def kaloriatabla(request):
+    return render(request, 'kaloriatabla.html')
+
+def food_list(request):
     '''
     The default route which lists all food items
     '''
@@ -95,7 +98,7 @@ def login_view(request):
         # Check if authentication successful
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('food_list'))
         else:
             return render(request, 'login.html', {
                 'message': 'Invalid username and/or password.',
@@ -109,7 +112,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect(reverse('index'))
+    return HttpResponseRedirect(reverse('food_list'))
 
 
 def food_list_view(request):
@@ -132,7 +135,7 @@ def food_list_view(request):
     except EmptyPage:
         pages = paginator.page(paginator.num_pages)
 
-    return render(request, 'index.html', {
+    return render(request, 'food_list.html', {
         'categories': FoodCategory.objects.all(),
         'foods': foods,
         'pages': pages,
