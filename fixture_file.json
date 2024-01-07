@@ -1,0 +1,239 @@
+
+
+// your_fixture_file.json
+[
+  {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 1,
+    "fields": {
+      "activity": "Alvás",
+      "energyConsumption": "0.93",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 2,
+    "fields": {
+      "activity": "Fekvés",
+      "energyConsumption": "1.10",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 3,
+    "fields": {
+      "activity": "Állás",
+      "energyConsumption": "1.58",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 4,
+    "fields": {
+      "activity": "Gépkocsivezetés",
+      "energyConsumption": "1.60",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 5,
+    "fields": {
+      "activity": "Séta",
+      "energyConsumption": "2.75",
+      "note": "3 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 6,
+    "fields": {
+      "activity": "Gyaloglás",
+      "energyConsumption": "3.70",
+      "note": "6 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 7,
+    "fields": {
+      "activity": "Háztartási munka",
+      "energyConsumption": "3.43",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 8,
+    "fields": {
+      "activity": "Kerékpározás",
+      "energyConsumption": "3.57",
+      "note": "9 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 9,
+    "fields": {
+      "activity": "Mellúszás",
+      "energyConsumption": "4.40",
+      "note": "1.2 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 10,
+    "fields": {
+      "activity": "Mellúszás",
+      "energyConsumption": "4.40",
+      "note": "1.2 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 11,
+    "fields": {
+      "activity": "Asztalitenisz",
+      "energyConsumption": "4.50",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 12,
+    "fields": {
+      "activity": "Korcsolyázás",
+      "energyConsumption": "5.01",
+      "note": "12 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 13,
+    "fields": {
+      "activity": "Teniszezés",
+      "energyConsumption": "5.14",
+      "note": "12 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 14,
+    "fields": {
+      "activity": "Lovaglás",
+      "energyConsumption": "6.70",
+      "note": "galoppozásnál"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 15,
+    "fields": {
+      "activity": "Gimnasztika",
+      "energyConsumption": "6.71",
+      "note": "galoppozásnál"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 16,
+    "fields": {
+      "activity": "Intenzív úszás",
+      "energyConsumption": "6.90",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 17,
+    "fields": {
+      "activity": "Kenuzás",
+      "energyConsumption": "8.10",
+      "note": "7.6 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 18,
+    "fields": {
+      "activity": "Vívás",
+      "energyConsumption": "8.75",
+      "note": "-"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 19,
+    "fields": {
+      "activity": "Sífutás",
+      "energyConsumption": "9.00",
+      "note": "9 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 20,
+    "fields": {
+      "activity": "Sífutás",
+      "energyConsumption": "9.00",
+      "note": "9 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 21,
+    "fields": {
+      "activity": "Evezés",
+      "energyConsumption": "9.30",
+      "note": "6 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 22,
+    "fields": {
+      "activity": "Evezés",
+      "energyConsumption": "9.30",
+      "note": "6 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 23,
+    "fields": {
+      "activity": "Korcsolyázás",
+      "energyConsumption": "9.91",
+      "note": "21 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 24,
+    "fields": {
+      "activity": "Futás",
+      "energyConsumption": "10.07",
+      "note": "12 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 25,
+    "fields": {
+      "activity": "Kerékpározás",
+      "energyConsumption": "12.00",
+      "note": "30 km/h sebességnél"
+    }
+  },
+    {
+    "model": "foodtracker.EnergyConsumption",
+    "pk": 26,
+    "fields": {
+      "activity": "Futás",
+      "energyConsumption": "12.10",
+      "note": "15 km/h sebességnél"
+    }
+  },
+]

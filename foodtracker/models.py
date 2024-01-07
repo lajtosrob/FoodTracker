@@ -81,3 +81,15 @@ class Weight(models.Model):
 
     def __str__(self):
         return f'{self.user.username} - {self.weight} kg on {self.entry_date}'
+    
+class EnergyConsumption(models.Model):
+    activity = models.CharField(max_length=255)
+    energyConsumption = models.FloatField()
+    note = models.CharField(max_length=255)
+
+    class Meta: 
+        verbose_name = 'EnergyConsumption'
+        verbose_name_plural = 'EnergyConsumption'
+
+    def __str__(self):
+        return f'{self.activity} - {self.energyConsumption} - {self.note}'

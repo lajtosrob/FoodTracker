@@ -22,7 +22,7 @@ var ctx = document.getElementById('myBarChart');
 var myBarChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Fat', 'Carbs', 'Protein'],
+        labels: ['Zsír', 'Szénhidrát', 'Fehérje'],
         datasets:
         [
             {
@@ -82,7 +82,7 @@ var myBarChart = new Chart(ctx, {
                     fontColor: '#555759',
                     fontSize: 16,
                     fontStyle: 700,
-                    labelString: 'Macronutrients (g) per 100 grams'
+                    labelString: 'Makrotápanyagok 100 grammban'
                 },
             }],
         },
