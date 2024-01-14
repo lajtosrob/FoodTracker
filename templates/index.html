@@ -27,12 +27,14 @@
         <button  onclick="jelszo()" title="Jelszó">Elfelejtett jelszó</button>   
       </div> -->
     
-        
+ <div id = "rejtes">   
     
         <div class="container">
                     <div class="row">
                                     <div class="col-sm-1"></div>
-                                    <div class="col-sm-12">                        
+                                    <div class="col-sm-12"> 
+                                      
+    <div>                                     
         <div class = "betuk">  
             <div>Kalória</div>
             <div class="conatiner3">-B
@@ -72,6 +74,7 @@
             m   
         </div> 
         </div>
+      </div>        
         <div class="col-sm-1"></div>  
         </div>     
         </div>
@@ -82,6 +85,7 @@
             <!-- belépés egérrel a kalóritáblázatot tartlamazó oldalakra -->
              <div class="content" id="tableContent">
               <a href="{% url 'kaloriatabla' %}">Kalóriatábla</a>
+              <a href = "{% url 'szexkaloriatabla' %}">Szexkalóritáblázat</a>
              </div>
            </button>    
     
@@ -120,6 +124,7 @@
              <p>Bizonyára már számtalan cikket olvastál vagy hallottál a fogyókúrás módszerekről, s talán volt, hogy már elhatároztad magad, de még nem sikerült komolyabb eredményt elérned. Ha figyelemmel követed tanácsainkat, rövid időn belül magad is megtapasztalhatod a jelentős változást.</p>
             
             <p>Első lépésként mindenképp érdemes elolvasni az alábbi információkat, melyek további segítséget nyújthanak a sikeres fogyókúra érdekében. </p>
+           
             <br><br><br>
         <hr>
         
@@ -198,11 +203,11 @@
       </div>       
           </div>
     
-    Katt 
+    
     
           <div class = "col-md-6"> 
             <div class="container">
-             
+           Szeretnél meglepetést?  
               <script>
                 document.addEventListener('DOMContentLoaded', function () {
                   const container = document.getElementById('container5');
@@ -243,13 +248,15 @@
                   });
                 });
               </script>
+
     <div class ="container">
+      <img id="rezgosmile" src="{% static 'images/projekt smile 1.png' %}" alt="mosolygós smile" class="rezgosmile">
               <div class="gyumi" id="container5"></div> 
-            <img id="rezgosmile" src="{% static 'images/projekt smile 1.png' %}" alt="mosolygós smile" class="rezgosmile"> 
+            
             </div>
             </div>
           </div>
-        </div><br><hr>
+        </div>
       </div>
     </div>
     <hr>

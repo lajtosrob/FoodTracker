@@ -232,6 +232,7 @@
 
   margin:50px;
   width:400px;
+  margin-top:0cap;
 }
 img:hover {
   animation: shake 0.5s;

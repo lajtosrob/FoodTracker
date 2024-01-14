@@ -27,3 +27,5 @@ function mouseLeavedInformation() {
 	tableContent.style.display = "none"
 }
 
+//---------- címcsere------------------
+

@@ -35,5 +35,8 @@ urlpatterns = [
 
     path('user/', UserList.as_view()),
     path('user/<int:pk>/', UserDetail.as_view()),
+    path('szexkalóriatáblázat.html', views.szexkaloriatablazat, name='szexkaloriatablazat'),
+    path('forum.html', views.forum, name='forum'),
+    
 
 ]
