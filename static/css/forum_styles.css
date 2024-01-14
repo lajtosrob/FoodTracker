@@ -1,0 +1,49 @@
+#forum {
+                    max-width: 600px;
+                    margin: auto;
+                    padding: 20px;
+                }
+                
+                #comments-container {
+                    margin-bottom: 20px;
+                    font-family:Lucida;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+                
+                .comment {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    font-family:Lucida;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+                
+                #add-comment {
+                    display: flex;
+                    flex-direction: column;
+                    font-family:Lucida;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+                
+                textarea {
+                    margin-bottom: 10px;
+                    font-family:Lucida;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+                .post-comment{
+                    font-family:Lucida;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+  
+body{
+                    background-color: rgb(166, 196, 166);
+                    font-family:Lucida;
+                    font-style: italic;
+                    font-size: 20px;
+                 
+}
