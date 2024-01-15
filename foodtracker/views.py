@@ -58,10 +58,10 @@ def BMR(request):
 def BMR_szuk(request):
     return render(request, 'BMR.html')
 
-def szexkaloriatabla(request):
+def szexkaloriatablazat(request):
     return render(request, 'szexkalóriatáblázat.html')
 def forum(request):
-    return(request, 'forum.html')
+    return render(request, 'forum.html')
 
 
 def kaloriatabla(request):
