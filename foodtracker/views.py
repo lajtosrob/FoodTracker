@@ -56,7 +56,7 @@ def BMR(request):
     return render(request, 'BMR.html')
 
 def BMR_szuk(request):
-    return render(request, 'BMR.html')
+    return render(request, 'BMR szuk.html')
 
 def szexkaloriatablazat(request):
     return render(request, 'szexkalóriatáblázat.html')
