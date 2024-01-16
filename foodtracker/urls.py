@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import FoodDetail, FoodList, ImageDetail, ImageList, UserDetail, UserList, index, kaloriatabla
+from .views import FoodDetail, FoodList, ImageDetail, ImageList, UserDetail, UserList, EnergyConsumptionList, EnergyConsumptionDetail
 
 from . import views
 
@@ -32,6 +32,9 @@ urlpatterns = [
     
     path('image/', ImageList.as_view()),
     path('image/<int:pk>/', ImageDetail.as_view()),
+
+    path('energyconsumption/', EnergyConsumptionList.as_view()),
+    path('energyconsumption/<int:pk>/', EnergyConsumptionDetail.as_view()),
 
     path('user/', UserList.as_view()),
     path('user/<int:pk>/', UserDetail.as_view()),

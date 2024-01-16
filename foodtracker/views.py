@@ -7,12 +7,12 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
-from .models import User, Food, FoodCategory, FoodLog, Image, Weight
+from .models import User, Food, FoodCategory, FoodLog, Image, Weight, EnergyConsumption
 from .forms import FoodForm, ImageForm
 
 from rest_framework import generics
 
-from .serializers import FoodSerializer, ImageSerializer, UserSerializer
+from .serializers import FoodSerializer, ImageSerializer, UserSerializer, EnergyConsumptionSerializer
 
 from datetime import date
 
@@ -42,6 +42,15 @@ class ImageList(generics.ListCreateAPIView):
 class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
+
+class EnergyConsumptionList(generics.ListCreateAPIView):
+    queryset = EnergyConsumption.objects.all()
+    serializer_class = EnergyConsumptionSerializer
+
+
+class EnergyConsumptionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = EnergyConsumption.objects.all()
+    serializer_class = EnergyConsumptionSerializer   
 
 def index(request):
     return render(request, 'index.html')
