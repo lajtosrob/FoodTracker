@@ -1,14 +1,13 @@
 html {
     position: relative;
     min-height: 100%;
-
     
 }
 
 body {
     margin: 80px 10px 10px 10px; /* bottom = footer height */
     font-family: 'Montserrat', sans-serif !important;
-
+    max-width: 100%;
     /* background-image: url("../images/background.png"); */
     background-size: cover;
     background-color: rgb(166, 196, 166);
@@ -61,4 +60,8 @@ footer {
 
 #active-users {
     list-style-type: none;
+}
+
+.row {
+    margin-bottom: 50px;
 }
