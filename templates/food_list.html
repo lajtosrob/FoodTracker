@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Kalória-Boom | {{ title }}{% endblock %}
+
+{% block css %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/food_list.css' %}">
+
+{% endblock css %}  
 
 {% block body %}
 <div class='py-4 mt-auto'>

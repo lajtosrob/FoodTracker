@@ -134,7 +134,7 @@ def login_view(request):
             return HttpResponseRedirect(reverse('food_list'))
         else:
             return render(request, 'login.html', {
-                'message': 'Invalid username and/or password.',
+                'message': 'Hibás felhasználónév vagy jelszó.',
                 'categories': FoodCategory.objects.all()
             })
     else:
