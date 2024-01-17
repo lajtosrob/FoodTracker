@@ -1,23 +1,23 @@
-li{
-                    margin-left: 20px;
-                }
-                h2{
-                    font-size: 20px;
-                    font-family:Lucida;
-                    font-style: italic;
-                }
-                h1{
-                    text-align: center;
-                    font-family:Lucida;
-                    font-style: italic;
-                    font-size:30px;
-                }
-                li{
-                    font-size: 15px;
-                    font-family:Lucida;
-                    font-style: italic;
-                }
-                hr{
-                    margin:10px;
-                }
-                
+.container .row li {
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: Lucida;
+    font-style: italic;
+}
+
+.container .row li h2 {
+    font-size: 20px;
+    font-family: Lucida;
+    font-style: italic;
+}
+
+.container .row li h1 {
+    text-align: center;
+    font-family: Lucida;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.container .row hr {
+    margin: 10px;
+}
