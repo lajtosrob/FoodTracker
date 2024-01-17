@@ -88,12 +88,18 @@ def register(request):
         username = request.POST['username']
         email = request.POST['email']
 
+        if username == "" or email == "" or password == "" or confirmation == "":
+            return render(request, 'register.html', {
+            'message': 'Nincs minden mező kitöltve.',
+            'categories': FoodCategory.objects.all()
+            })
+
         # Ensure password matches confirmation
         password = request.POST['password']
         confirmation = request.POST['confirmation']
         if password != confirmation:
             return render(request, 'register.html', {
-                'message': 'Passwords must match.',
+                'message': 'Nem egyezik a jelszó.',
                 'categories': FoodCategory.objects.all()
             })
 
@@ -103,7 +109,7 @@ def register(request):
             user.save()
         except IntegrityError:
             return render(request, 'register.html', {
-                'message': 'Username already taken.',
+                'message': 'A felhasználónév már foglalt.',
                 'categories': FoodCategory.objects.all()
             })
         login(request, user)
