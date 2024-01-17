@@ -32,11 +32,7 @@
     <!-- Custom styles -->
     <link href='{% static "css/styles.css" %}' rel="stylesheet" />
 
-    {% block css %}
-    {% endblock  %}
-    {% block footer_scripts %}
-{% endblock footer_scripts %}
-
+    {% block css %} {% endblock %} {% block footer_scripts %} {% endblock footer_scripts %}
   </head>
 
   <body>
@@ -143,6 +139,7 @@
         </div>
       </div>
     </nav>
+    <div id="active-users"></div>
 
     <main>
       <div class="container">{% block body %} {% endblock %}</div>
@@ -160,8 +157,35 @@
       </div>
     </footer>
 
+    {% comment %} {% block script %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{% static 'js/food_list.js' %}"></script>
+
+    {% endblock %} {% endcomment %} 
+    
     {% block script %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let userNumberEl = document.getElementById("active-users");
+      userNumberEl.innerHTML = "<ul>"
+
+      fetch("/user/")
+        .then((res) => res.json())
+        .then((data) => {
+          userNumberEl.innerHTML = `<li>Felhasználók száma: ${data.length}</li>`;
+        });
+
+      fetch("/food/")
+      .then((res) => res.json())
+      .then((data) => {
+        userNumberEl.innerHTML += `<li> Választható ételek száma: ${data.length}</li></ul>`;
+      });
+    </script>
+
+
+
     {% endblock %}
+
   </body>
 </html>

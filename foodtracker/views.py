@@ -38,19 +38,19 @@ class ImageList(generics.ListCreateAPIView):
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
 
-
 class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
+
 
 class EnergyConsumptionList(generics.ListCreateAPIView):
     queryset = EnergyConsumption.objects.all()
     serializer_class = EnergyConsumptionSerializer
 
-
 class EnergyConsumptionDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = EnergyConsumption.objects.all()
     serializer_class = EnergyConsumptionSerializer   
+    
 
 def index(request):
     return render(request, 'index.html')
