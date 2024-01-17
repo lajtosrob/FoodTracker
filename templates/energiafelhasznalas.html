@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+
+    
+<link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.smiley.css' %}">
+
+    
+
+{% endblock css %}  
+
+{% block title %}Kalória Boom | {{ title }}{% endblock title %}
+
+{% block body %}
+
+<br><br>
+<h1><b>Energiafelhasználás kalóriatáblázat </b></h1><br>
+<hr>
+{% comment %} <div class="container"> {% endcomment %}
+    <div class="row">
+        <div id="energy-consumption">
+            <table><tr><th>Aktivitás</th><th>Energia felhasználás</th><th>Megjegyzés</th><tr>
+                <tbody id="etable">
+                </tbody>
+            <table>
+        </div>
+    {% comment %} </div>  {% endcomment %}
+
+</div>    
+<p>Vissza a főoldalra, katt <a href="{% url 'index' %}" >[ide]</a></p>
+
+{% endblock %}
+
+{% block script %}
+
+<script>
+    let itemlist = [];
+    let econsumption = document.getElementById("etable");
+    econsumption.innerHTML = "";
+
+
+    fetch("/energyconsumption/")
+    .then((res) => res.json())
+    .then((data) => {
+        itemlist = data
+    }); 
+    
+    function drawTable() {
+    itemlist.forEach(item => {
+    econsumption.innerHTML += "<tr><td>" + item.activity + "</td><td>" + item.energyConsumption + "</td><td>" + item.note + "</td></tr>";
+    });
+
+    }
+
+    const myTimeout = setTimeout(drawTable, 1000)
+    
+  </script>
+
+{% endblock script %}
+
+
+

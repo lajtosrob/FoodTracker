@@ -40,6 +40,7 @@ urlpatterns = [
     path('user/<int:pk>/', UserDetail.as_view()),
     path('szexkalóriatáblázat.html', views.szexkaloriatablazat, name='szexkaloriatablazat'),
     path('kaloriatabla.html', views.kaloriatabla, name='kaloriatabla'),
+    path('energiafelhasznalas.html', views.energiafelhasznalas, name='energiafelhasznalas'),
     path('forum.html', views.forum, name='forum'),
     
 
