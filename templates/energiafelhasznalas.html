@@ -5,8 +5,9 @@
 {% block css %}
 
     
+{% comment %} <link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.smiley.css' %}"> {% endcomment %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.smiley.css' %}">
 
     
 
@@ -22,7 +23,7 @@
 {% comment %} <div class="container"> {% endcomment %}
     <div class="row">
         <div id="energy-consumption">
-            <table><tr><th>Aktivitás</th><th>Energia felhasználás</th><th>Megjegyzés</th><tr>
+            <table><tr><th class="table-head">Aktivitás</th><th class="table-head">Energia felhasználás</th><th class="table-head">Megjegyzés</th><tr>
                 <tbody id="etable">
                 </tbody>
             <table>
