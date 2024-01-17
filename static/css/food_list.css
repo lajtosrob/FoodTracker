@@ -1,3 +1,10 @@
 .img-fluid {
     height: 200px;
 }
+div.my-3 {
+    height: 50px;
+    margin: 0;
+}
+h4.card-title {
+    height: 53px;
+}
