@@ -1,14 +1,19 @@
 {% extends 'base.html' %} 
 
-{% load static %} 
+{% load static %}
 
-{% block css %}
+ {% block css %}
 
 <style>
+
+
   #forum {
-    max-width: 600px;
+    {% comment %} max-width: 600px; {% endcomment %}
     margin: auto;
     padding: 20px;
+    width: 30vw;
+    overflow-y: auto;
+    max-height: 43vh;
   }
 
   #comments-container {
@@ -16,6 +21,8 @@
     font-family: Lucida;
     font-style: italic;
     font-size: 20px;
+
+
   }
 
   .comment {
@@ -25,6 +32,7 @@
     font-family: Lucida;
     font-style: italic;
     font-size: 20px;
+
   }
 
 
@@ -34,6 +42,8 @@
     font-family: Lucida;
     font-style: italic;
     font-size: 20px;
+
+
   }
 
   textarea {
@@ -56,7 +66,7 @@
   }
   .hullogyumik {
     margin: 0;
-    overflow: hidden;
+
     background-color: rgb(166, 196, 166);
   }
 
@@ -74,7 +84,7 @@
     overflow: hidden;
   }
 
-  #container5 {
+  #container {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -113,17 +123,14 @@
   }
 </style>
 
-{% endblock css %} 
-
-{% block title %}Kalória Boom | {{ title }}
-
-{% endblock %} {% block body %}
+{% endblock css %} {% block title %}Kalória Boom | {{ title }} {% endblock %} 
+{% block body %}
 
 <div class="hullogyumik">
   <div id="gyumolcsContainer">
     <!-- Gyümölcsök kerülnek ide dinamikusan JavaScript segítségével -->
   </div>
-  <div calass="conatiner">
+  <div class="container">
     <div class="row">
       <div calss="col-sm-1"></div>
       <div calss="col-sm-10">
@@ -142,31 +149,32 @@
   <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-      <h2>
+      <h1>Fórum</h1>
+      <h4>
         Számunkra fontos a véleményed és az olyan információk, amelyek hasznosak
         lehetnek mások számára.
-      </h2>
-      <h2>
+      </h4>
+      <h4>
         Megoszthatsz saját recepteket, ötleteket és kérdezhetsz bátran közösségi
         oldalunkon.
-      </h2>
+      </h4>
 
       <div id="forum">
-        <div id="comments-container"></div>
-
-        <div id="add-comment">
-          <textarea
-            id="comment-text"
-            placeholder="Írj egy véleményt..."
-          ></textarea>
-          <button id="post-comment">Vélemény elküldése</button>
+        <div id="comments-container">
+          <div id="add-comment">
+            <textarea rows=6 column=20
+              id="comment-text"
+              placeholder="Írj egy véleményt..."
+            ></textarea>
+            <button id="post-comment">Vélemény elküldése</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
   <div class="col-sm-1"></div>
   <p>Vissza a főoldalra katt<a href="index.html" target="_blank"> [ide]</a></p>
+  <hr>
 
 </div>
 
@@ -176,6 +184,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    var isLiked = false;
     var commentsContainer = document.getElementById("comments-container");
     var commentText = document.getElementById("comment-text");
     var postCommentBtn = document.getElementById("post-comment");
@@ -196,7 +205,10 @@
 
         likeBtn.addEventListener("click", function () {
           var currentLikes = parseInt(likeCount.textContent);
-          likeCount.textContent = currentLikes + 1;
+          isLiked
+            ? (likeCount.textContent = currentLikes - 1)
+            : (likeCount.textContent = currentLikes + 1);
+          isLiked = !isLiked;
         });
 
         commentsContainer.appendChild(commentElement);

@@ -20,7 +20,9 @@
     <button onmouseenter="mouseEnteredCalculator()" onmouseleave="mouseLeavedCalculator()">Kalóriatáblázat
     <!-- belépés egérrel a kalóritáblázatot tartlamazó oldalakra -->
     <div class="content" id="tableContent">
-        <a href="kaloriatabla.html">Kalóriatáblázat</a>                  
+        <a href="kaloriatabla.html">Kalóriatáblázat</a>        
+        <a href = "{% url 'szexkaloriatablazat' %}">Szexkalóriatáblázat</a>
+        <a href = "{% url 'energiafelhasznalas' %}">Energiafelhasználás táblázat</a>          
     </div>
     </button>  
 
