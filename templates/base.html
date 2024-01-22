@@ -161,12 +161,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       let userNumberEl = document.getElementById("active-users");
-      userNumberEl.innerHTML = "<ul>"
+      userNumberEl.innerHTML = "<ul><li>"
 
       fetch("/user/")
         .then((res) => res.json())
         .then((data) => {
-          userNumberEl.innerHTML += `<li>Felhasználók száma: ${data.length}</li>`;
+          userNumberEl.innerHTML += `Felhasználók száma: ${data.length}</li>`;
         });
 
       fetch("/food/")

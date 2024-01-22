@@ -4,11 +4,12 @@
 
  {% block css %}
 
+ <link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.css' %}">
+
 <style>
 
 
   #forum {
-    {% comment %} max-width: 600px; {% endcomment %}
     margin: auto;
     padding: 20px;
     width: 30vw;
@@ -121,6 +122,11 @@
     justify-content: center;
     align-items: center;
   }
+  h1 {
+    text-align: center;
+  }
+
+
 </style>
 
 {% endblock css %} {% block title %}Kalória Boom | {{ title }} {% endblock %} 
