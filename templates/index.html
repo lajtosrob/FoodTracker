@@ -106,8 +106,13 @@
               <a href="{% url 'BMR_szuk' %}" >BMR szükséglet</a>     
               
           </div>
-        </button>    
-        <button class ="content" id= "forumGomb"> Fórum </button>
+        </button>
+        <button onmouseenter="showMenu('forumContent')" onmouseleave="hideMenu('forumContent')">Egyéb
+          <div class="content" id="forumContent">
+              <a href="forum.html">Fórum</a>
+          </div>
+      </button>
+        
       </div>             
     </div>        
          

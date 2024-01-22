@@ -66,7 +66,9 @@ touch .env
 
 On Windows: 
 
+```bash
 echo. > .env
+```
 
 Next, declare environment variables in the **.env** file. Make sure you don't use quotation marks around the strings.
 

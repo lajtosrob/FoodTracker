@@ -53,11 +53,13 @@
     }); 
     
     function drawTable() {
-    itemlist.forEach(item => {
-    econsumption.innerHTML += "<tr><td>" + item.activity + "</td><td>" + item.energyConsumption + "</td><td>" + item.note + "</td></tr>";
-    });
+        itemlist.forEach(item => {
+        econsumption.innerHTML += "<tr><td>" + item.activity + "</td><td>" + item.energyConsumption + "</td><td>" + item.note + "</td></tr>";
+        });
 
     }
+
+    drawTable()
 
     const myTimeout = setTimeout(drawTable, 1000)
     

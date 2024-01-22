@@ -1,31 +1,21 @@
-let kalkulatorContent = document.getElementById("kalkulatorContent")
-let tableContent = document.getElementById("tableContent")
-
-function mouseEnteredCalculator() {
-	tableContent.style.display = "block"
-	kalkulatorContent.style.display="none"
-}
-
-function mouseEnteredCalculator2() {
-	kalkulatorContent.style.display = "block"
-	tableContent.style.display = "none"
-}
-
-function mouseLeavedCalculator() {
-	tableContent.style.display = "none"
-}
-
-function mouseLeavedCalculator2() {
-	kalkulatorContent.style.display = "none"
-}
-
-function mouseEnteredInformation() {
-	tableContent.style.display = "block"
-}
-
-function mouseLeavedInformation() {
-	tableContent.style.display = "none"
-}
-
-//---------- címcsere------------------
+(function () {
+	let kalkulatorContent = document.getElementById("kalkulatorContent");
+	let tableContent = document.getElementById("tableContent");
+	let forumContent = document.getElementById("forumContent");
+            
+	function showMenu(contentId) {
+	    hideAllMenus();
+	    document.getElementById(contentId).style.display = "block";
+	}
+            
+	function hideMenu(contentId) {
+	    document.getElementById(contentId).style.display = "none";
+	}
+            
+	function hideAllMenus() {
+	    tableContent.style.display = "none";
+	    kalkulatorContent.style.display = "none";
+	    forumContent.style.display = "none";
+	}
+                })();
 
