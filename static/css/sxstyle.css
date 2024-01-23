@@ -18,6 +18,7 @@
     font-size: 30px;
 }
 
+
 .container .row hr {
     margin: 10px;
 }
@@ -25,4 +26,25 @@
 h1 {
     text-align: center;
     margin: auto;
+}
+
+.table-header {
+    text-align: center;
+    font-family: Lucida;
+    font-style: italic;
+    font-size: 30px;
+    background-color: #2a382a;
+    color: aquamarine;
+}
+
+th {
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: Lucida;
+    font-style: italic;
+}
+p {
+    display:inline-block;
+    text-align: center;
+    padding-top: 30px;
 }

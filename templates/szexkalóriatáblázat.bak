@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sxstyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.css' %}">
+
+{% endblock css %}  
+
+{% block title %}Kalória Boom | {{ title }}{% endblock %}
+
+{% block body %}
+
+<br><br>
+<h1><b>Szex kalóriatáblázat </b></h1><br>
+<hr>
+<div class = "container">
+    <div class = "row">
+        <div class = col-sm-0></div>
+
+        <div class = col-sm-6>
+
+            
+            <table>
+            <tr><th class="table-header">Ruha levétele a nőről</th></tr>
+            <tr><th>Ha a nő akarja ................................... 15 kcal</th></tr>
+            <tr><th>Ha a nő nem akarja ......................... 189 kcal</th></tr>
+            <tr><th>A melltartó levétele</th></tr>
+            <tr><th>két kézzel ............................................. 8 kcal</th></tr>
+            <tr><th>egy kézzel .......................................... 12 kcal</th></tr>
+            <tr><th>foggal .............................................. 115 kcal</th></tr>
+            <br>
+            <tr><th class="table-header">Előjáték</th></tr>
+            <tr><th>a csikló megkeresésével .................... 18 kcal</th></tr>
+            <tr><th>a g-pont megkeresésével ................... 92 kcal</th></tr>
+            <tr><th>egyikkel sem törődve .......................... 0 kcal</th></tr>
+            <tr><th class="table-header">Óvszer felhelyezése</th></tr>
+            <tr><th>erekció esetén .................................... 3 kcal</th></tr>
+            <tr><th>erekció nélkül ................................ 312 kcal</th></tr>
+            <tr><th>erekció és röhögés nélkül .............. 357 kcal</th></tr>
+            <tr><th class="table-header">Poziciók</th></tr>
+            <tr><th>misszionárius .................................. 12 kcal</th></tr>
+            <tr><th>69 fekve ........................................... 75 kcal</th></tr>
+            <tr><th>69 állva ......................................... 132 kcal</th></tr>
+            <tr><th>kutya ............................................. 216 kcal</th></tr>
+            <tr><th>talicska ......................................... 312 kcal</th></tr>
+            <tr><th>csillár póz ......................................932 kcal</th></tr> 
+            </table>            
+
+        </div>
+        <div class = col-sm-6>
+            <table>
+            <tr><th class="table-header">Kielégítés</th></tr>
+            <tr><th>kielégíteni egy férfit ........................................ 10 kcal</th></tr>
+            <tr><th>kielégíteni egy nőt ....................................... 1026 kcal</th></tr>
+            <br>
+            <tr><th class="table-header">Orgazmus</th></tr>
+            <tr><th>valódi ............................................................ 117 kcal</th></tr>
+            <tr><th>megjátszott .................................................... 326 kcal</th></tr>
+            <tr><th>az ágyban ölelkezni ......................................... 16 kcal</th></tr>
+            <tr><th>gyorsan lelépni ................................................ 35 kcal</th></tr>
+            <tr><th>megmagyarázni, hogy miért akarsz lelépni ... 812 kcal </th></tr>
+            <tr><th class="table-header">Második erekció</th></tr>
+            <tr><th>20-29 ................................................................ 32 kcal</th></tr>
+            <tr><th>30-39 ................................................................ 86 kcal</th></tr>
+            <tr><th>40-49 .............................................................. 125 kcal</th></tr>
+            <tr><th>50-59 .............................................................. 952 kcal</th></tr>
+            <tr><th>60-69 ............................................................ 2716 kcal</th></tr>
+            <tr><th>70 felett .................................... az eredmény függőben</th></tr>
+            <tr><th class="table-header">Felöltözés szex után</th></tr>
+            <tr><th>nyugodtan ........................................................ 36 kcal</th></tr>
+            <tr><th>sietősen ............................................................ 98 kcal</th></tr>
+            <tr><th>ha a lány apja kopog az ajtón ..................... 1238 kcal</th></tr>
+            <tr><th>ha a lány férje kopog az ajtón ..................... 3524 kcal</th></tr>
+            <tr><th>ha a lány barátnője kopog az ajtón .......... <span style='font-size:25px;'>&#128518;</span></th></tr>
+            </table>
+
+
+        </div>
+
+        <div class = col-sm-0></div>
+        <p>Vissza a főoldalra, katt <a href="{% url 'index' %}" >[ide]</a></p>
+
+    </div>
+</div>    
+
+{% block footer_scripts %}
+
+{% endblock footer_scripts %}
+
+</body>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ <link rel="stylesheet" href="sxstyle.css">
+    <title>Szex kalóriatábla</title>
+</head>
+<body style=" background-color: rgb(166, 196, 166)">
+
+    <br><br>
+    <h1><b>Szex kalóriatábla </b></h1><br>
+    <hr>
+    <div class = "container">
+        <div class = "row">
+            <div class = col-sm-2></div>
+
+            <div class = col-sm-5>
+                
+                <br>
+                <h2><b>Ruha levétele a nőről</b></h2>
+                <li>Ha a nő akarja ................................... 15 kcal</li>
+                <li>Ha a nő nem akarja ......................... 189 kcal</li><br>
+                <h2><b>A melltartó levétele</b></h2>
+                <li>két kézzel ............................................. 8 kcal</li>
+                <li>egy kézzel .......................................... 12 kcal</li>
+                <li>foggal .............................................. 115 kcal</li>
+                <br>
+                <h2><b>Előjáték</b></h2>
+                <li>a csikló megkeresésével .................... 18 kcal</li>
+                <li>a g-pont megkeresésével ................... 92 kcal</li>
+                <li>egyikkel sem törődve .......................... 0 kcal</li><br>
+                <h2><b>Óvszer felhelyezése</b></h2>
+                <li>erekció esetén .................................... 3 kcal</li>
+                <li>erekció nélkül ................................ 312 kcal</li>
+                <li>erekció és röhögés nélkül .............. 357 kcal</li><br>
+                <h2><b>Poziciók</b></h2>
+                <li>misszionárius .................................. 12 kcal</li>
+                <li>69 fekve ........................................... 75 kcal</li>
+                <li>69 állva ......................................... 132 kcal</li>
+                <li>kutya ............................................. 216 kcal</li>
+                <li>talicska ......................................... 312 kcal</li>
+                <li>csillár póz ......................................932 kcal</li><br>                
+
+            </div>
+            <div class = col-sm-5>
+                <br>
+                <h2><b>Kielégítés</b></h2>
+                <li>kielégíteni egy férfit ........................................ 10 kcal</li>
+                <li>kielégíteni egy nőt ....................................... 1026 kcal</li>
+                <br>
+                <h2><b>Orgazmus</b></h2>
+                <li>valódi ............................................................ 117 kcal</li>
+                <li>megjátszott .................................................... 326 kcal</li><br>
+                <h2><b>Szex után</b></h2>
+                <li>az ágyban ölelkezni ......................................... 16 kcal</li>
+                <li>gyorsan lelépni ................................................ 35 kcal</li>
+                <li>megmagyarázni, hogy miért akarsz lelépni ... 812 kcal </li><br>
+                <h2><b>Második erekció</b></h2>
+                <li>20-29 ................................................................ 32 kcal</li>
+                <li>30-39 ................................................................ 86 kcal</li>
+                <li>40-49 .............................................................. 125 kcal</li>
+                <li>50-59 .............................................................. 952 kcal</li>
+                <li>60-69 ............................................................ 2716 kcal</li>
+                <li>70 felett .................................... az eredmény függőben</li><br>
+                <h2><b>Felöltözés szex után</b></h2>
+                <li>nyugodtan ........................................................ 36 kcal</li>
+                <li>sietősen ............................................................ 98 kcal</li>
+                <li>ha a lány apja kopog az ajtón ..................... 1238 kcal</li>
+                <li>ha a lány férje kopog az ajtón ..................... 3524 kcal </li>
+                <li>ha a lány barátnője kopok az ajtón .......... <span style='font-size:25px;'>&#128518;</span></li>
+                <br><br>
+            </div>
+            <div class = col-sm-2></div>
+        </div>
+    </div>    
+    
+</body>
+</html> -->

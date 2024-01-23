@@ -59,11 +59,12 @@ footer {
 }
 
 #active-users {
-    list-style-type: none;
+    padding: 70px 0 0 20px;
+    width: 300px;
+    text-align: left;
+
 }
 
 .row {
     margin-bottom: 50px;
 }
-
-
