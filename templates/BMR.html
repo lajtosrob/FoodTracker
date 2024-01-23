@@ -95,7 +95,8 @@
 
 <hr>
 <br> 
-
+<div class="container">
+  
   <h1><b><u>Fogyás-dátumkalkulátor</u></b></h1>
   <br><br>
   <label for="leadniKivantKg">Leadni kívánt súly 0-100 között (kg):</label>
@@ -103,16 +104,12 @@
   <button id="idoGomb" onclick="idoKalkulacioGomb()">Kalkuláció</button>
   <br><br>
   <p>Az elérési dátum: <u><b> <span style="font-size:25px;"  id="datumEredmeny"></b></u></span></p>
+  <p class="back-to-main">Vissza a főoldalra, katt <a href="{% url 'index' %}" >[ide]</a></p>
 
   <br><hr><br>
 
-  <p>Vissza a főoldalra, katt <a href="{% url 'index' %}" >[ide]</a></p>
-<hr>
-<br>
-<br>
 
-
-<br>
+</div>
 
 
 {% endblock %}
