@@ -7,7 +7,11 @@
     
 {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.smiley.css' %}"> {% endcomment %}
+<link href='{% static "css/bootstrap.min.css" %}' rel="stylesheet" />
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/kaloriatabla.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/energiafelhasznalas.css' %}">
+rel="stylesheet" />
 
     
 
@@ -26,7 +30,7 @@
 {% comment %} <div class="container"> {% endcomment %}
     <div class="row">
         <div id="energy-consumption">
-            <table><tr><th class="table-head">Aktivitás</th><th class="table-head">Energia felhasználás</th><th class="table-head">Megjegyzés</th><tr>
+            <table class="table-hover"><tr><th class="table-head">Aktivitás</th><th class="table-head">Energia felhasználás</th><th class="table-head">Megjegyzés</th><tr>
                 <tbody id="etable">
                 </tbody>
             <table>
